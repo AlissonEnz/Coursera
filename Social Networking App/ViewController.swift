@@ -59,3 +59,19 @@ class ViewController: UIViewController {
 
 }
 
+extension ViewController: UITextViewDelegate {
+    
+    func textViewDidChange(_ textView: UITextView) {
+        if textView == self.twitterPost {
+            let count = 140 - self.twitterPost.text.characters.count
+            if count < 0 {
+                self.twitterCount.textColor = UIColor.red
+            } else {
+                self.twitterCount.textColor = UIColor.gray
+            }
+            self.twitterCount.text = "\(count)"
+        }
+    }
+    
+}
+
