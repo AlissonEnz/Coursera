@@ -7,19 +7,49 @@
 //
 
 import UIKit
+import Social
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    @IBOutlet var twitterPost: UITextView!
+    @IBOutlet var facebookPost: UITextView!
+    @IBOutlet var otherPost: UITextView!
+
+    @IBAction func twitterShare(_ sender: Any) {
+        if SLComposeViewController.isAvailable(forServiceType: SLServiceTypeTwitter) {
+            let twitterView = SLComposeViewController(forServiceType: SLServiceTypeTwitter)!
+            twitterView.setInitialText(self.twitterPost.text)
+            self.present(twitterView, animated: true, completion: nil)
+        } else {
+            self.showMessage(title: "Error!", message: "Please, login in Twitter first")
+        }
+    }
+    
+    @IBAction func facebookShare(_ sender: Any) {
+        if SLComposeViewController.isAvailable(forServiceType: SLServiceTypeFacebook) {
+            let facebookView = SLComposeViewController(forServiceType: SLServiceTypeFacebook)!
+            facebookView.setInitialText(self.facebookPost.text)
+            self.present(facebookView, animated: true, completion: nil)
+        } else {
+            self.showMessage(title: "Error!", message: "Please, login in Facebook first")
+        }
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func otherShare(_ sender: Any) {
+        let otherView = UIActivityViewController(activityItems: [otherPost.text], applicationActivities: nil)
+        self.present(otherView, animated: true, completion: nil)
     }
-
+    
+    @IBAction func showMessage(_ sender: Any) {
+        self.showMessage(title: "Just a message!", message: "Nothing to do here")
+    }
+    
+    func showMessage(title:String, message:String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okBtn = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        alert.addAction(okBtn)
+        self.present(alert, animated: true, completion: nil)
+    }
 
 }
 

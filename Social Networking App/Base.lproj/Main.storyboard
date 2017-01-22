@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Social_Networking_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +21,152 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q2J-Jd-KzX">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="20"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="jjR-9D-8B1"/>
+                                </constraints>
+                            </view>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jTj-rN-4bm">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <items>
+                                    <barButtonItem image="twitter" id="0ce-hH-Qyk">
+                                        <color key="tintColor" red="0.0" green="0.51764705882352935" blue="0.70588235294117641" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="twitterShare:" destination="BYZ-38-t0r" id="3cx-Gm-kQu"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="dLD-ji-1NM"/>
+                                    <barButtonItem image="facebook" id="jBa-qb-EnC">
+                                        <color key="tintColor" red="0.23137254901960785" green="0.34901960784313724" blue="0.59607843137254901" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="facebookShare:" destination="BYZ-38-t0r" id="r9m-30-oHf"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="kCr-E6-stf"/>
+                                    <barButtonItem image="share" id="AJ6-rA-NPQ">
+                                        <color key="tintColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="otherShare:" destination="BYZ-38-t0r" id="GS4-P1-rfg"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="k3Z-by-eZU"/>
+                                    <barButtonItem image="other" id="Af5-pU-KIg">
+                                        <color key="tintColor" red="0.8755580357142857" green="0.12549019610000001" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="showMessage:" destination="BYZ-38-t0r" id="fUc-Ud-je9"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Veo-Ui-Fhd">
+                                <rect key="frame" x="0.0" y="74" width="20" height="187.5"/>
+                                <color key="backgroundColor" red="0.0" green="0.51764705882352935" blue="0.70588235294117641" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="QtD-z9-fkJ"/>
+                                </constraints>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n9U-21-T15">
+                                <rect key="frame" x="30" y="74" width="329" height="187.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</string>
+                                <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardAppearance="alert"/>
+                            </textView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qdn-g5-TJh">
+                                <rect key="frame" x="0.0" y="271.5" width="50" height="188"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="facebook-big" translatesAutoresizingMaskIntoConstraints="NO" id="19o-h0-fCe">
+                                        <rect key="frame" x="8.5" y="77.5" width="32" height="32"/>
+                                        <color key="tintColor" red="0.98431372549999996" green="0.99215686270000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="32" id="VKN-ul-fdl"/>
+                                            <constraint firstAttribute="width" constant="32" id="kL0-N9-AAu"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.23137254901960785" green="0.34901960784313724" blue="0.59607843137254901" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="19o-h0-fCe" firstAttribute="centerY" secondItem="qdn-g5-TJh" secondAttribute="centerY" id="EHM-fh-I08"/>
+                                    <constraint firstItem="19o-h0-fCe" firstAttribute="centerX" secondItem="qdn-g5-TJh" secondAttribute="centerX" id="NUv-BQ-zTk"/>
+                                    <constraint firstAttribute="width" constant="50" id="j1u-RC-hmJ"/>
+                                </constraints>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rLQ-lm-KlJ">
+                                <rect key="frame" x="60" y="271.5" width="299" height="188"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</string>
+                                <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardAppearance="alert"/>
+                            </textView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YMW-uA-gdd">
+                                <rect key="frame" x="0.0" y="469.5" width="20" height="187.5"/>
+                                <color key="backgroundColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="25U-wm-Uoe"/>
+                                </constraints>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gol-9T-Wbx">
+                                <rect key="frame" x="30" y="469.5" width="329" height="187.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</string>
+                                <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardAppearance="alert"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="rLQ-lm-KlJ" firstAttribute="centerY" secondItem="qdn-g5-TJh" secondAttribute="centerY" id="0tV-qx-8hu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gol-9T-Wbx" secondAttribute="trailing" id="11U-g8-qm7"/>
+                            <constraint firstItem="Veo-Ui-Fhd" firstAttribute="height" secondItem="qdn-g5-TJh" secondAttribute="height" id="2YS-fF-6tE"/>
+                            <constraint firstItem="jTj-rN-4bm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="4A7-fx-9eJ"/>
+                            <constraint firstItem="gol-9T-Wbx" firstAttribute="height" secondItem="YMW-uA-gdd" secondAttribute="height" id="4dj-PM-WNo"/>
+                            <constraint firstItem="rLQ-lm-KlJ" firstAttribute="height" secondItem="qdn-g5-TJh" secondAttribute="height" id="5uF-3S-9fS"/>
+                            <constraint firstAttribute="trailing" secondItem="jTj-rN-4bm" secondAttribute="trailing" id="Aa1-AE-aTO"/>
+                            <constraint firstItem="gol-9T-Wbx" firstAttribute="centerY" secondItem="YMW-uA-gdd" secondAttribute="centerY" id="D9g-I3-Se0"/>
+                            <constraint firstItem="qdn-g5-TJh" firstAttribute="top" secondItem="Veo-Ui-Fhd" secondAttribute="bottom" constant="10" id="EfS-yy-DQE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="n9U-21-T15" secondAttribute="trailing" id="F5q-Cr-8ED"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rLQ-lm-KlJ" secondAttribute="trailing" id="OBc-Ia-72j"/>
+                            <constraint firstItem="YMW-uA-gdd" firstAttribute="top" secondItem="qdn-g5-TJh" secondAttribute="bottom" constant="10" id="Ovr-0d-ZT4"/>
+                            <constraint firstItem="rLQ-lm-KlJ" firstAttribute="leading" secondItem="qdn-g5-TJh" secondAttribute="trailing" constant="10" id="Oza-IT-y9V"/>
+                            <constraint firstAttribute="trailing" secondItem="q2J-Jd-KzX" secondAttribute="trailing" id="TYX-JM-SpU"/>
+                            <constraint firstItem="qdn-g5-TJh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Yl0-ed-LOB"/>
+                            <constraint firstItem="q2J-Jd-KzX" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="bxf-Ea-HLf"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="YMW-uA-gdd" secondAttribute="bottom" constant="10" id="cqw-cr-lzT"/>
+                            <constraint firstItem="n9U-21-T15" firstAttribute="height" secondItem="Veo-Ui-Fhd" secondAttribute="height" id="gVh-Pe-wbR"/>
+                            <constraint firstItem="Veo-Ui-Fhd" firstAttribute="top" secondItem="jTj-rN-4bm" secondAttribute="bottom" constant="10" id="ghS-dL-5G1"/>
+                            <constraint firstItem="YMW-uA-gdd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="gyU-Zk-0Mn"/>
+                            <constraint firstItem="gol-9T-Wbx" firstAttribute="leading" secondItem="YMW-uA-gdd" secondAttribute="trailing" constant="10" id="iJ6-fB-3Z0"/>
+                            <constraint firstItem="n9U-21-T15" firstAttribute="leading" secondItem="Veo-Ui-Fhd" secondAttribute="trailing" constant="10" id="mlw-gn-ifN"/>
+                            <constraint firstItem="n9U-21-T15" firstAttribute="centerY" secondItem="Veo-Ui-Fhd" secondAttribute="centerY" id="n90-op-Rpg"/>
+                            <constraint firstItem="Veo-Ui-Fhd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="vyx-QB-W8e"/>
+                            <constraint firstItem="qdn-g5-TJh" firstAttribute="height" secondItem="YMW-uA-gdd" secondAttribute="height" id="wE0-lZ-X5S"/>
+                            <constraint firstItem="jTj-rN-4bm" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="y4R-Wz-jA3"/>
+                            <constraint firstItem="q2J-Jd-KzX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="y6Y-Ng-nDv"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="facebookPost" destination="rLQ-lm-KlJ" id="m42-4y-kOy"/>
+                        <outlet property="otherPost" destination="gol-9T-Wbx" id="cEw-3x-HAE"/>
+                        <outlet property="twitterPost" destination="n9U-21-T15" id="P2N-ab-meq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="140" y="138.98050974512745"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="facebook" width="24" height="24"/>
+        <image name="facebook-big" width="32" height="32"/>
+        <image name="other" width="24" height="24"/>
+        <image name="share" width="24" height="24"/>
+        <image name="twitter" width="24" height="24"/>
+    </resources>
 </document>
