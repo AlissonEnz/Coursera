@@ -14,11 +14,17 @@ class ViewController: UIViewController {
     @IBOutlet var twitterPost: UITextView!
     @IBOutlet var facebookPost: UITextView!
     @IBOutlet var otherPost: UITextView!
+    @IBOutlet var twitterCount: UILabel!
 
     @IBAction func twitterShare(_ sender: Any) {
         if SLComposeViewController.isAvailable(forServiceType: SLServiceTypeTwitter) {
             let twitterView = SLComposeViewController(forServiceType: SLServiceTypeTwitter)!
-            twitterView.setInitialText(self.twitterPost.text)
+            if self.twitterPost.text.characters.count > 140 {
+                let shortText = self.twitterPost.text[self.twitterPost.text.startIndex...self.twitterPost.text.index(self.twitterPost.text.startIndex, offsetBy: 140-1)]
+                twitterView.setInitialText(shortText)
+            } else {
+                twitterView.setInitialText(self.twitterPost.text)
+            }
             self.present(twitterView, animated: true, completion: nil)
         } else {
             self.showMessage(title: "Error!", message: "Please, login in Twitter first")

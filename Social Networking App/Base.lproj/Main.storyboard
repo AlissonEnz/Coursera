@@ -63,16 +63,27 @@
                                 </items>
                             </toolbar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Veo-Ui-Fhd">
-                                <rect key="frame" x="0.0" y="74" width="20" height="187.5"/>
+                                <rect key="frame" x="0.0" y="74" width="50" height="187.5"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="twitter-big" translatesAutoresizingMaskIntoConstraints="NO" id="3j2-7T-OWv">
+                                        <rect key="frame" x="9" y="77" width="32" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="32" id="Zht-cL-Y8u"/>
+                                            <constraint firstAttribute="width" constant="32" id="lIY-5a-iU5"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.51764705882352935" blue="0.70588235294117641" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="20" id="QtD-z9-fkJ"/>
+                                    <constraint firstAttribute="width" constant="50" id="QtD-z9-fkJ"/>
+                                    <constraint firstItem="3j2-7T-OWv" firstAttribute="centerX" secondItem="Veo-Ui-Fhd" secondAttribute="centerX" id="r5w-4B-6Qh"/>
+                                    <constraint firstItem="3j2-7T-OWv" firstAttribute="centerY" secondItem="Veo-Ui-Fhd" secondAttribute="centerY" id="umE-J5-4Lr"/>
                                 </constraints>
                             </view>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n9U-21-T15">
-                                <rect key="frame" x="30" y="74" width="329" height="187.5"/>
+                                <rect key="frame" x="60" y="74" width="299" height="187.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</string>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore mana aliqua.</string>
                                 <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardAppearance="alert"/>
@@ -99,26 +110,44 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rLQ-lm-KlJ">
                                 <rect key="frame" x="60" y="271.5" width="299" height="188"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</string>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</string>
                                 <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardAppearance="alert"/>
                             </textView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YMW-uA-gdd">
-                                <rect key="frame" x="0.0" y="469.5" width="20" height="187.5"/>
+                                <rect key="frame" x="0.0" y="469.5" width="50" height="187.5"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="share-big" translatesAutoresizingMaskIntoConstraints="NO" id="Vk1-02-2oB">
+                                        <rect key="frame" x="9" y="78" width="32" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="32" id="eHj-pj-Lcj"/>
+                                            <constraint firstAttribute="width" constant="32" id="iaJ-rL-YuZ"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
                                 <color key="backgroundColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="20" id="25U-wm-Uoe"/>
+                                    <constraint firstAttribute="width" constant="50" id="25U-wm-Uoe"/>
+                                    <constraint firstItem="Vk1-02-2oB" firstAttribute="centerY" secondItem="YMW-uA-gdd" secondAttribute="centerY" id="gfe-mI-qIR"/>
+                                    <constraint firstItem="Vk1-02-2oB" firstAttribute="centerX" secondItem="YMW-uA-gdd" secondAttribute="centerX" id="sTS-Km-d9Q"/>
                                 </constraints>
                             </view>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gol-9T-Wbx">
-                                <rect key="frame" x="30" y="469.5" width="329" height="187.5"/>
+                                <rect key="frame" x="60" y="469.5" width="299" height="187.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</string>
                                 <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardAppearance="alert"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ASW-6x-pS3">
+                                <rect key="frame" x="343" y="240" width="8" height="17"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.59684354026845643" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
+                                <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -132,6 +161,7 @@
                             <constraint firstItem="gol-9T-Wbx" firstAttribute="centerY" secondItem="YMW-uA-gdd" secondAttribute="centerY" id="D9g-I3-Se0"/>
                             <constraint firstItem="qdn-g5-TJh" firstAttribute="top" secondItem="Veo-Ui-Fhd" secondAttribute="bottom" constant="10" id="EfS-yy-DQE"/>
                             <constraint firstAttribute="trailingMargin" secondItem="n9U-21-T15" secondAttribute="trailing" id="F5q-Cr-8ED"/>
+                            <constraint firstItem="ASW-6x-pS3" firstAttribute="top" secondItem="n9U-21-T15" secondAttribute="bottom" constant="-21" id="Kwe-if-J6M"/>
                             <constraint firstAttribute="trailingMargin" secondItem="rLQ-lm-KlJ" secondAttribute="trailing" id="OBc-Ia-72j"/>
                             <constraint firstItem="YMW-uA-gdd" firstAttribute="top" secondItem="qdn-g5-TJh" secondAttribute="bottom" constant="10" id="Ovr-0d-ZT4"/>
                             <constraint firstItem="rLQ-lm-KlJ" firstAttribute="leading" secondItem="qdn-g5-TJh" secondAttribute="trailing" constant="10" id="Oza-IT-y9V"/>
@@ -143,6 +173,7 @@
                             <constraint firstItem="Veo-Ui-Fhd" firstAttribute="top" secondItem="jTj-rN-4bm" secondAttribute="bottom" constant="10" id="ghS-dL-5G1"/>
                             <constraint firstItem="YMW-uA-gdd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="gyU-Zk-0Mn"/>
                             <constraint firstItem="gol-9T-Wbx" firstAttribute="leading" secondItem="YMW-uA-gdd" secondAttribute="trailing" constant="10" id="iJ6-fB-3Z0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ASW-6x-pS3" secondAttribute="trailing" constant="8" id="lpy-z7-ucG"/>
                             <constraint firstItem="n9U-21-T15" firstAttribute="leading" secondItem="Veo-Ui-Fhd" secondAttribute="trailing" constant="10" id="mlw-gn-ifN"/>
                             <constraint firstItem="n9U-21-T15" firstAttribute="centerY" secondItem="Veo-Ui-Fhd" secondAttribute="centerY" id="n90-op-Rpg"/>
                             <constraint firstItem="Veo-Ui-Fhd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="vyx-QB-W8e"/>
@@ -154,6 +185,7 @@
                     <connections>
                         <outlet property="facebookPost" destination="rLQ-lm-KlJ" id="m42-4y-kOy"/>
                         <outlet property="otherPost" destination="gol-9T-Wbx" id="cEw-3x-HAE"/>
+                        <outlet property="twitterCount" destination="ASW-6x-pS3" id="nRi-vP-kEf"/>
                         <outlet property="twitterPost" destination="n9U-21-T15" id="P2N-ab-meq"/>
                     </connections>
                 </viewController>
@@ -167,6 +199,8 @@
         <image name="facebook-big" width="32" height="32"/>
         <image name="other" width="24" height="24"/>
         <image name="share" width="24" height="24"/>
+        <image name="share-big" width="32" height="32"/>
         <image name="twitter" width="24" height="24"/>
+        <image name="twitter-big" width="32" height="32"/>
     </resources>
 </document>
