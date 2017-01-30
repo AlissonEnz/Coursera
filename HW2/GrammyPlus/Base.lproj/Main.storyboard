@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12100" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12072"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GrammyPlus" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j8M-kT-PyP">
+                                <rect key="frame" x="159" y="513" width="56" height="33"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Refresh"/>
+                                <connections>
+                                    <action selector="refreshPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="ALQ-5A-q6y"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qua-cM-37K">
+                                <rect key="frame" x="16" y="162" width="343" height="343"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login" translatesAutoresizingMaskIntoConstraints="NO" id="0aX-UE-a4w">
+                                        <rect key="frame" x="8" y="8" width="327" height="327"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="qua-cM-37K" secondAttribute="height" multiplier="1:1" id="JIM-d5-bqh"/>
+                                    <constraint firstAttribute="trailing" secondItem="0aX-UE-a4w" secondAttribute="trailing" constant="8" id="NX4-mT-Lgh"/>
+                                    <constraint firstItem="0aX-UE-a4w" firstAttribute="leading" secondItem="qua-cM-37K" secondAttribute="leading" constant="8" id="Qn6-Wy-ojy"/>
+                                    <constraint firstItem="0aX-UE-a4w" firstAttribute="top" secondItem="qua-cM-37K" secondAttribute="top" constant="8" id="lRn-KB-A9F"/>
+                                    <constraint firstAttribute="bottom" secondItem="0aX-UE-a4w" secondAttribute="bottom" constant="8" id="w0w-m7-thl"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sfv-E2-Tas">
+                                <rect key="frame" x="160" y="98" width="55" height="38"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
+                                <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="loginLogoutPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="yZU-nn-Uqq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Sfv-E2-Tas" firstAttribute="centerX" secondItem="qua-cM-37K" secondAttribute="centerX" id="FxS-0O-fzK"/>
+                            <constraint firstItem="qua-cM-37K" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="UeQ-cf-Zd1"/>
+                            <constraint firstItem="qua-cM-37K" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="V3R-Co-3S1"/>
+                            <constraint firstItem="j8M-kT-PyP" firstAttribute="centerX" secondItem="qua-cM-37K" secondAttribute="centerX" id="Wa0-zI-5ZS"/>
+                            <constraint firstItem="j8M-kT-PyP" firstAttribute="top" secondItem="qua-cM-37K" secondAttribute="bottom" constant="8" id="pta-Jz-RZ6"/>
+                            <constraint firstItem="qua-cM-37K" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="xNb-SH-pHi"/>
+                            <constraint firstItem="qua-cM-37K" firstAttribute="top" secondItem="Sfv-E2-Tas" secondAttribute="bottom" constant="26" id="xYI-P8-4D9"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="0aX-UE-a4w" id="ik1-d9-Rwy"/>
+                        <outlet property="loginLogoutBtn" destination="Sfv-E2-Tas" id="gjL-64-tWj"/>
+                        <outlet property="refreshBtn" destination="j8M-kT-PyP" id="wi3-vC-TQu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="login" width="128" height="128"/>
+    </resources>
+</document>

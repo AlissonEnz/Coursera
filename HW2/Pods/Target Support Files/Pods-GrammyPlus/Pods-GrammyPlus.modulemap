@@ -1,0 +1,6 @@
+framework module Pods_GrammyPlus {
+  umbrella header "Pods-GrammyPlus-umbrella.h"
+
+  export *
+  module * { export * }
+}
